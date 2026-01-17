@@ -36,23 +36,27 @@
             For booking inquiries, session work, or lessons, please fill out the form below or email me directly at <a href="mailto:your-email@gmail.com" class="text-white hover:underline">your-email@gmail.com</a>.
         </p>
 
-        <form action="mailto:your-email@gmail.com" method="post" enctype="text/plain" class="space-y-6">
+        <form action="https://formspree.io/f/mbdddeon" method="POST" class="space-y-6">
+
             <div>
                 <label for="name" class="block text-xs uppercase tracking-widest text-zinc-500 mb-2">Name</label>
-                <input type="text" id="name" name="name" class="w-full bg-zinc-900 border border-zinc-800 p-4 text-white focus:outline-none focus:border-zinc-500 transition">
+                <input type="text" name="name" id="name" required
+                       class="w-full bg-zinc-900 border border-zinc-800 p-4 text-white focus:outline-none focus:border-zinc-600 transition">
             </div>
-            
+        
             <div>
                 <label for="email" class="block text-xs uppercase tracking-widest text-zinc-500 mb-2">Email</label>
-                <input type="email" id="email" name="email" class="w-full bg-zinc-900 border border-zinc-800 p-4 text-white focus:outline-none focus:border-zinc-500 transition">
+                <input type="email" name="email" id="email" required
+                       class="w-full bg-zinc-900 border border-zinc-800 p-4 text-white focus:outline-none focus:border-zinc-600 transition">
             </div>
-
+        
             <div>
                 <label for="message" class="block text-xs uppercase tracking-widest text-zinc-500 mb-2">Message</label>
-                <textarea id="message" name="message" rows="5" class="w-full bg-zinc-900 border border-zinc-800 p-4 text-white focus:outline-none focus:border-zinc-500 transition"></textarea>
+                <textarea name="message" id="message" rows="5" required
+                          class="w-full bg-zinc-900 border border-zinc-800 p-4 text-white focus:outline-none focus:border-zinc-600 transition"></textarea>
             </div>
-
-            <button type="submit" class="w-full py-4 bg-white text-black font-bold uppercase tracking-widest hover:bg-zinc-300 transition">
+        
+            <button type="submit" class="w-full py-4 bg-zinc-100 text-black text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-300 transition">
                 Send Message
             </button>
         </form>
