@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colin O'Connor | Home</title>
+    <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0a0a0a; color: #ededed; overflow-x: hidden; }
+        .menu-transition { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .hover-underline-animation { display: inline-block; position: relative; }
+        .hover-underline-animation::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1px; bottom: 0; left: 0; background-color: #ededed; transform-origin: bottom right; transition: transform 0.25s ease-out; }
+        .hover-underline-animation:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-zinc-700 selection:text-white">
+    <div id="overlay" onclick="toggleMenu()" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+    <div id="sidebar" class="fixed top-0 right-0 h-full w-full md:w-80 bg-zinc-900 z-50 translate-x-full menu-transition shadow-2xl flex flex-col p-8 border-l border-zinc-800">
+        <button onclick="toggleMenu()" class="self-end text-xs tracking-widest uppercase mb-12 text-zinc-500 hover:text-white">Close —</button>
+        <nav class="flex flex-col space-y-6 mt-4">
+            <a href="index.html" class="text-2xl font-light hover:text-zinc-500 transition">Home</a>
+            <a href="about.html" class="text-2xl font-light hover:text-zinc-500 transition">About</a>
+            <a href="work.html" class="text-2xl font-light hover:text-zinc-500 transition">Work</a>
+            <a href="rates.html" class="text-2xl font-light hover:text-zinc-500 transition">Rates</a>
+            <a href="lessons.html" class="text-2xl font-light hover:text-zinc-500 transition">Lessons</a>
+            <a href="contact.html" class="text-2xl font-light hover:text-zinc-500 transition">Contact</a>
+        </nav>
+        <div class="mt-auto text-zinc-700 text-[10px] tracking-widest uppercase">
+            © 2026 Colin O'Connor
+        </div>
+    </div>
+
+    <header class="fixed top-0 w-full z-40 mix-blend-difference px-8 py-10 flex justify-between items-center">
+        <a href="index.html" class="text-sm font-bold tracking-[0.3em] uppercase">Colin O'Connor</a>
+        <button onclick="toggleMenu()" class="text-sm tracking-widest uppercase hover:opacity-70 transition">Menu +</button>
+    </header>
+
+    <main>
+        <section class="h-screen flex flex-col justify-center px-8 max-w-6xl mx-auto">
+            <h1 class="text-5xl md:text-8xl font-thin tracking-tighter mb-8">
+                Sound.<br>Structure.<br>Session.
+            </h1>
+            <p class="text-zinc-500 text-lg max-w-md mb-12">
+                Nashville-based guitarist bridging the gap between classical theory and modern production.
+            </p>
+            <div class="absolute bottom-10 left-8 text-xs text-zinc-700 animate-bounce">
+                ↓ SCROLL
+            </div>
+        </section>
+
+        <section class="py-32 border-t border-zinc-900 px-8">
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="aspect-square bg-zinc-900 grayscale opacity-80">
+                     <img src="images/portrait-small.jpg" alt="Portrait" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h2 class="text-xs font-bold tracking-[0.3em] text-zinc-500 uppercase mb-6">The Artist</h2>
+                    <p class="text-2xl font-light leading-snug mb-8">
+                        "Music is not just about playing the notes; it's about understanding why they matter."
+                    </p>
+                    <a href="about.html" class="hover-underline-animation text-sm uppercase tracking-widest">Read Full Bio →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 border-t border-zinc-900 px-8 bg-zinc-900/20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-xs font-bold tracking-[0.3em] text-zinc-500 uppercase mb-12">Selected Work</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="p-8 border border-zinc-800 hover:border-zinc-600 transition duration-500">
+                        <h3 class="text-xl mb-2">Session Recordings</h3>
+                        <p class="text-zinc-500 text-sm">Studio tracking for rock, funk, and jazz.</p>
+                    </div>
+                    <div class="p-8 border border-zinc-800 hover:border-zinc-600 transition duration-500">
+                        <h3 class="text-xl mb-2">The Evergreens</h3>
+                        <p class="text-zinc-500 text-sm">Live performance & original composition.</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="work.html" class="hover-underline-animation text-sm uppercase tracking-widest">Listen to Audio Reel →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 border-t border-zinc-900 px-8">
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div class="mb-10 md:mb-0">
+                    <h2 class="text-4xl font-light mb-4">Instruction & Pricing</h2>
+                    <p class="text-zinc-500 max-w-sm">From private 1-on-1 theory lessons to full-day studio rates.</p>
+                </div>
+                <div class="flex flex-col space-y-4 items-start">
+                    <a href="lessons.html" class="hover-underline-animation text-sm uppercase tracking-widest">View Lesson Info →</a>
+                    <a href="rates.html" class="hover-underline-animation text-sm uppercase tracking-widest">Check Availability →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-20 border-t border-zinc-900 text-center">
+        <a href="contact.html" class="text-zinc-500 hover:text-white transition text-sm tracking-widest uppercase">Get in touch</a>
+    </footer>
+</body>
+</html>

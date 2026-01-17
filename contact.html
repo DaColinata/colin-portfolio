@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colin O'Connor | Contact</title>
+    <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0a0a0a; color: #ededed; overflow-x: hidden; }
+        .menu-transition { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <div id="overlay" onclick="toggleMenu()" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+    <div id="sidebar" class="fixed top-0 right-0 h-full w-full md:w-80 bg-zinc-900 z-50 translate-x-full menu-transition shadow-2xl flex flex-col p-8 border-l border-zinc-800">
+        <button onclick="toggleMenu()" class="self-end text-xs tracking-widest uppercase mb-12 text-zinc-500 hover:text-white">Close —</button>
+        <nav class="flex flex-col space-y-6 mt-4">
+            <a href="index.html" class="text-2xl font-light hover:text-zinc-500 transition">Home</a>
+            <a href="about.html" class="text-2xl font-light hover:text-zinc-500 transition">About</a>
+            <a href="work.html" class="text-2xl font-light hover:text-zinc-500 transition">Work</a>
+            <a href="rates.html" class="text-2xl font-light hover:text-zinc-500 transition">Rates</a>
+            <a href="lessons.html" class="text-2xl font-light hover:text-zinc-500 transition">Lessons</a>
+            <a href="contact.html" class="text-2xl font-light hover:text-zinc-500 transition">Contact</a>
+        </nav>
+    </div>
+    <header class="fixed top-0 w-full z-40 mix-blend-difference px-8 py-10 flex justify-between items-center">
+        <a href="index.html" class="text-sm font-bold tracking-[0.3em] uppercase">Colin O'Connor</a>
+        <button onclick="toggleMenu()" class="text-sm tracking-widest uppercase hover:opacity-70 transition">Menu +</button>
+    </header>
+
+    <main class="pt-40 px-8 pb-20 max-w-xl mx-auto">
+        <h1 class="text-5xl font-light mb-8">Get in Touch</h1>
+        <p class="text-zinc-500 mb-12">
+            For booking inquiries, session work, or lessons, please fill out the form below or email me directly at <a href="mailto:your-email@gmail.com" class="text-white hover:underline">your-email@gmail.com</a>.
+        </p>
+
+        <form action="mailto:your-email@gmail.com" method="post" enctype="text/plain" class="space-y-6">
+            <div>
+                <label for="name" class="block text-xs uppercase tracking-widest text-zinc-500 mb-2">Name</label>
+                <input type="text" id="name" name="name" class="w-full bg-zinc-900 border border-zinc-800 p-4 text-white focus:outline-none focus:border-zinc-500 transition">
+            </div>
+            
+            <div>
+                <label for="email" class="block text-xs uppercase tracking-widest text-zinc-500 mb-2">Email</label>
+                <input type="email" id="email" name="email" class="w-full bg-zinc-900 border border-zinc-800 p-4 text-white focus:outline-none focus:border-zinc-500 transition">
+            </div>
+
+            <div>
+                <label for="message" class="block text-xs uppercase tracking-widest text-zinc-500 mb-2">Message</label>
+                <textarea id="message" name="message" rows="5" class="w-full bg-zinc-900 border border-zinc-800 p-4 text-white focus:outline-none focus:border-zinc-500 transition"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 bg-white text-black font-bold uppercase tracking-widest hover:bg-zinc-300 transition">
+                Send Message
+            </button>
+        </form>
+
+    </main>
+</body>
+</html>
