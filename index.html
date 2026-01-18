@@ -32,10 +32,33 @@
         </div>
     </div>
 
-    <header class="fixed top-0 w-full z-40 mix-blend-difference px-8 py-10 flex justify-between items-center">
-        <a href="index.html" class="text-sm font-bold tracking-[0.3em] uppercase">Colin O'Connor</a>
-        <button onclick="toggleMenu()" class="text-sm tracking-widest uppercase hover:opacity-70 transition">Menu +</button>
-    </header>
+    <header class="relative w-full h-screen bg-cover bg-center flex flex-col" style="background-image: url('images/indexheader.jpeg');">
+    
+        <div class="absolute inset-0 bg-black/50"></div>
+    
+        <div class="relative z-10 w-full px-8 py-10 flex justify-between items-center">
+            <a href="index.html" class="text-sm font-bold tracking-[0.3em] uppercase text-white hover:opacity-80 transition">
+                Colin O'Connor
+            </a>
+            <button onclick="toggleMenu()" class="text-sm tracking-widest uppercase text-white hover:opacity-70 transition">
+                Menu +
+            </button>
+        </div>
+    
+        <div class="relative z-10 flex-grow flex flex-col justify-center px-8 max-w-6xl mx-auto w-full">
+            <h1 class="text-5xl md:text-8xl font-thin tracking-tighter mb-8 text-white">
+                It's <u>all</u><br>about the<br><b>music.</b>
+            </h1>
+            <p class="text-zinc-200 text-lg max-w-md mb-12 shadow-black drop-shadow-md">
+                Nashville-based guitarist, multi-instrumentalist, composer/arranger, and producer bridging the gap between your vision and reality.
+            </p>
+        </div>
+    
+        <div class="relative z-10 absolute bottom-10 left-8 text-xs text-zinc-300 animate-bounce">
+            ↓ SCROLL
+        </div>
+    
+    </header> 
 
     <main>
         <section class="h-screen flex flex-col justify-center px-8 max-w-6xl mx-auto">
