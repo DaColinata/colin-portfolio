@@ -30,52 +30,263 @@
         <button onclick="toggleMenu()" class="text-sm tracking-widest uppercase hover:opacity-70 transition">Menu +</button>
     </header>
 
-    <main class="pt-40 px-8 pb-20 max-w-6xl mx-auto">
-        <h1 class="text-5xl font-light mb-4">Rates & Services</h1>
-        <p class="text-zinc-500 mb-16 max-w-2xl">Standard rates for 2026. For touring or complex project inquiries, please contactme directly.</p>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <main class="pt-40 px-8 pb-20 max-w-4xl mx-auto">
+    
+        <h1 class="text-5xl font-light mb-12">Rates & Booking</h1>
+        
+        <p class="text-zinc-400 text-lg mb-16 max-w-2xl">
+            Transparent pricing for sessions, live performance, and academic accompanying. 
+            For custom projects or full-day rates, please <a href="contact.html" class="text-white underline hover:text-zinc-400">get in touch</a>.
+        </p>
+    
+        <section class="mb-24">
+            <h2 class="text-xs font-bold tracking-[0.2em] text-white uppercase mb-8 border-b border-zinc-800 pb-4">
+                Accompanying Services
+            </h2>
             
-            <div class="border border-zinc-800 p-8 hover:bg-zinc-900/40 transition">
-                <h3 class="text-xl font-medium mb-2">Remote Session</h3>
-                <p class="text-zinc-500 text-sm mb-8 h-10">High-fidelity guitar tracks sent directly to your inbox.</p>
-                <div class="text-3xl font-light mb-8">$150 <span class="text-sm text-zinc-600">/ track</span></div>
-                <ul class="text-zinc-400 space-y-4 text-sm mb-8">
-                    <li>✓ 2 Revisions included</li>
-                    <li>✓ Quad Cortex / Neural DSP tones</li>
-                    <li>✓ 48hr Turnaround available</li>
-                    <li>✓ Stems provided</li>
-                </ul>
-                <a href="contact.html" class="block text-center py-3 border border-zinc-700 hover:bg-white hover:text-black transition uppercase text-xs tracking-widest">Book Now</a>
+            <div class="grid gap-y-8">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="flex justify-between items-baseline border-b border-zinc-900 pb-2">
+                        <span class="text-zinc-300">25 Minute Lesson</span>
+                        <span class="text-white font-mono">$20</span>
+                    </div>
+                    <div class="flex justify-between items-baseline border-b border-zinc-900 pb-2">
+                        <span class="text-zinc-300">50 Minute Lesson</span>
+                        <span class="text-white font-mono">$30</span>
+                    </div>
+                </div>
+    
+                <div class="space-y-6 mt-4">
+                    
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-white text-lg">Standard Jury</h3>
+                            <p class="text-zinc-500 text-xs uppercase tracking-wider mt-1">+ 1 Free Rehearsal</p>
+                        </div>
+                        <div class="text-xl text-zinc-300 font-mono">$30</div>
+                    </div>
+    
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-white text-lg">Performance Jury</h3>
+                            <p class="text-zinc-500 text-xs uppercase tracking-wider mt-1">+ 2 Free Rehearsals</p>
+                        </div>
+                        <div class="text-xl text-zinc-300 font-mono">$40</div>
+                    </div>
+    
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-white text-lg">Grad Jury</h3>
+                            <p class="text-zinc-500 text-xs uppercase tracking-wider mt-1">+ 3 Free Rehearsals</p>
+                        </div>
+                        <div class="text-xl text-zinc-300 font-mono">$50</div>
+                    </div>
+                </div>
+    
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+                    
+                    <div class="flex justify-between items-baseline border-b border-zinc-900 pb-2">
+                        <div>
+                            <span class="text-zinc-300 block">Writer's Round</span>
+                            <span class="text-zinc-600 text-[10px] uppercase tracking-wider block">+ 1 Free Rehearsal</span>
+                        </div>
+                        <span class="text-white font-mono">$15 <span class="text-zinc-600 text-xs">/ song</span></span>
+                    </div>
+    
+                    <div class="flex justify-between items-baseline border-b border-zinc-900 pb-2">
+                        <div>
+                            <span class="text-zinc-300 block">Audition</span>
+                            <span class="text-zinc-600 text-[10px] uppercase tracking-wider block">+ 1 Free Rehearsal</span>
+                        </div>
+                        <span class="text-white font-mono">$15 <span class="text-zinc-600 text-xs">/ song</span></span>
+                    </div>
+    
+                    <div class="flex justify-between items-baseline border-b border-zinc-900 pb-2">
+                        <span class="text-zinc-300">Extra Rehearsal</span>
+                        <span class="text-white font-mono">$15 <span class="text-zinc-600 text-xs">/ 30 min</span></span>
+                    </div>
+                    
+                    <div class="flex justify-between items-baseline border-b border-zinc-900 pb-2">
+                        <span class="text-zinc-300">Seminar</span>
+                        <span class="text-white font-mono">$20</span>
+                    </div>
+    
+                </div>
+    
             </div>
-
-            <div class="border border-zinc-800 p-8 hover:bg-zinc-900/40 transition">
-                <h3 class="text-xl font-medium mb-2">Live Performance</h3>
-                <p class="text-zinc-500 text-sm mb-8 h-10">Fill-in work for local shows or short run tours.</p>
-                <div class="text-3xl font-light mb-8">$250 <span class="text-sm text-zinc-600">/ show</span></div>
-                <ul class="text-zinc-400 space-y-4 text-sm mb-8">
-                    <li>✓ Pro gear & reliable transport</li>
-                    <li>✓ Chart reading & memorization</li>
-                    <li>✓ Background vocals available</li>
-                    <li>✓ Rehearsal rates negotiable</li>
-                </ul>
-                <a href="contact.html" class="block text-center py-3 border border-zinc-700 hover:bg-white hover:text-black transition uppercase text-xs tracking-widest">Inquire</a>
+        </section>
+        <section class="mb-24">
+            <h2 class="text-xs font-bold tracking-[0.2em] text-white uppercase mb-8 border-b border-zinc-800 pb-4">
+                Production & Demos
+            </h2>
+            
+            <div class="space-y-8">
+                
+                <div class="flex justify-between items-baseline border-b border-zinc-900 pb-2">
+                    <span class="text-zinc-300">Demos</span>
+                    <span class="text-white font-mono">$36 <span class="text-zinc-600 text-xs">/ minute of music</span></span>
+                </div>
+    
+                <div class="flex justify-between items-start border-b border-zinc-900 pb-2">
+                    <div>
+                        <span class="text-zinc-300 block">Masters</span>
+                        <p class="text-zinc-500 text-[10px] uppercase tracking-wider mt-1 max-w-xs">
+                            + Expenses (Session musicians, studio time, etc.)
+                        </p>
+                    </div>
+                    <span class="text-white font-mono">$180 <span class="text-zinc-600 text-xs">/ minute of music</span></span>
+                </div>
+    
+                <div class="bg-zinc-900/50 p-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left rounded border border-zinc-800">
+                    <div class="mb-4 md:mb-0">
+                        <h3 class="text-white text-sm font-bold uppercase tracking-wide">Full Albums & EPs</h3>
+                        <p class="text-zinc-500 text-sm mt-1">Looking for a comprehensive package?</p>
+                    </div>
+                    <a href="contact.html" class="text-xs border border-zinc-600 px-6 py-3 uppercase tracking-widest hover:bg-white hover:text-black transition">
+                        Request Custom Quote
+                    </a>
+                </div>
+    
             </div>
-
-            <div class="border border-zinc-800 p-8 hover:bg-zinc-900/40 transition">
-                <h3 class="text-xl font-medium mb-2">Arranging</h3>
-                <p class="text-zinc-500 text-sm mb-8 h-10">Full instrumental composition for your project.</p>
-                <div class="text-3xl font-light mb-8">Custom <span class="text-sm text-zinc-600">/ project</span></div>
-                <ul class="text-zinc-400 space-y-4 text-sm mb-8">
-                    <li>✓ Neo-Riemannian Theory application</li>
-                    <li>✓ String & Horn arrangements</li>
-                    <li>✓ Logic Pro project files</li>
-                    <li>✓ Collaborative process</li>
-                </ul>
-                <a href="contact.html" class="block text-center py-3 border border-zinc-700 hover:bg-white hover:text-black transition uppercase text-xs tracking-widest">Contact</a>
+        </section>
+        <section class="mb-24">
+            <h2 class="text-xs font-bold tracking-[0.2em] text-white uppercase mb-8 border-b border-zinc-800 pb-4">
+                Studio & Session Work
+            </h2>
+            
+            <div class="space-y-8">
+                
+                <div class="flex justify-between items-baseline border-b border-zinc-900 pb-2">
+                    <div>
+                        <span class="text-zinc-300 block">Remote Session</span>
+                        <span class="text-zinc-500 text-[10px] uppercase tracking-wider block">Includes 2 revisions</span>
+                    </div>
+                    <span class="text-white font-mono">$100 <span class="text-zinc-600 text-xs">/ song</span></span>
+                </div>
+    
+                <div class="flex justify-between items-start border-b border-zinc-900 pb-2">
+                    <div>
+                        <span class="text-zinc-300 block">In-Studio Session</span>
+                        <div class="text-zinc-500 text-[10px] uppercase tracking-wider mt-1 space-y-1">
+                            <p>• $100 Minimum Call</p>
+                            <p>• Rate increases to $75/hr after 4 hours</p>
+                        </div>
+                    </div>
+                    <span class="text-white font-mono">$50 <span class="text-zinc-600 text-xs">/ hour</span></span>
+                </div>
+    
+                <div class="bg-zinc-900/30 p-4 rounded border border-zinc-800/50">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <span class="text-zinc-300 font-bold text-sm">Multi-Instrumental (Doubles)</span>
+                        <span class="text-zinc-500 text-xs uppercase tracking-widest">Add-on Fee</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-zinc-400">
+                        <div class="flex justify-between border-b border-zinc-800 pb-1">
+                            <span>First Double</span>
+                            <span class="text-white font-mono">+20%</span>
+                        </div>
+                        <div class="flex justify-between border-b border-zinc-800 pb-1">
+                            <span>Each Additional</span>
+                            <span class="text-white font-mono">+15%</span>
+                        </div>
+                    </div>
+                </div>
+    
             </div>
-
+        </section>
+        <section class="mb-24">
+            <div class="flex justify-between items-end border-b border-zinc-800 pb-4 mb-8">
+                <h2 class="text-xs font-bold tracking-[0.2em] text-white uppercase">
+                    Transcription & Charts
+                </h2>
+                <span class="text-[10px] text-zinc-500 uppercase tracking-wider">
+                    *1 Page = 4 Measures
+                </span>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                
+                <div class="space-y-8">
+                    <div class="flex justify-between items-baseline border-b border-zinc-900 pb-2">
+                        <span class="text-zinc-300">Full Transcription</span>
+                        <span class="text-white font-mono">$10 <span class="text-zinc-600 text-xs">/ page</span></span>
+                    </div>
+                    <div class="flex justify-between items-baseline border-b border-zinc-900 pb-2">
+                        <span class="text-zinc-300">Part Transcription</span>
+                        <span class="text-white font-mono">$4 <span class="text-zinc-600 text-xs">/ page</span></span>
+                    </div>
+                </div>
+    
+                <div class="space-y-8">
+                    <div class="flex justify-between items-baseline border-b border-zinc-900 pb-2">
+                        <span class="text-zinc-300">Lead Sheet</span>
+                        <span class="text-white font-mono">$20</span>
+                    </div>
+                    <div class="flex justify-between items-baseline border-b border-zinc-900 pb-2">
+                        <span class="text-zinc-300">Rhythm Chart</span>
+                        <span class="text-white font-mono">$25</span>
+                    </div>
+                    <div class="flex justify-between items-baseline border-b border-zinc-900 pb-2">
+                        <span class="text-zinc-300">Nashville Numbers</span>
+                        <span class="text-white font-mono">$15</span>
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+        <section class="mb-32">
+            <div class="flex justify-between items-end border-b border-zinc-800 pb-4 mb-8">
+                <h2 class="text-xs font-bold tracking-[0.2em] text-white uppercase">
+                    Arranging & Composition
+                </h2>
+                <span class="text-[10px] text-zinc-500 uppercase tracking-wider">
+                    *1 Page = 4 Measures
+                </span>
+            </div>
+    
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+    
+                <div class="space-y-8">
+                    <div class="flex justify-between items-baseline border-b border-zinc-900 pb-2">
+                        <span class="text-zinc-300">Add Horns</span>
+                        <span class="text-white font-mono">$9 <span class="text-zinc-600 text-xs">/ page</span></span>
+                    </div>
+                    <div class="flex justify-between items-baseline border-b border-zinc-900 pb-2">
+                        <span class="text-zinc-300">Add Strings</span>
+                        <span class="text-white font-mono">$11 <span class="text-zinc-600 text-xs">/ page</span></span>
+                    </div>
+                    <div class="flex justify-between items-baseline border-b border-zinc-900 pb-2">
+                        <span class="text-zinc-300">Strings + Horns</span>
+                        <span class="text-white font-mono">$18 <span class="text-zinc-600 text-xs">/ page</span></span>
+                    </div>
+                </div>
+    
+                <div class="space-y-8">
+                     <div class="flex justify-between items-baseline border-b border-zinc-900 pb-2">
+                        <span class="text-zinc-300">Full Orchestration</span>
+                        <span class="text-white font-mono">$21 <span class="text-zinc-600 text-xs">/ page</span></span>
+                    </div>
+    
+                    <div class="bg-zinc-900/30 p-6 rounded border border-zinc-800/50">
+                        <h3 class="text-white text-sm font-bold uppercase tracking-wide mb-1">Original Composition</h3>
+                        <p class="text-zinc-500 text-xs mb-4">Custom layouts, original works, or unique instrumentation.</p>
+                        <a href="contact.html" class="text-xs border border-zinc-600 px-4 py-2 uppercase tracking-widest hover:bg-white hover:text-black transition inline-block">
+                            Contact for Quote
+                        </a>
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+    
+        <div class="text-center pt-16 border-t border-zinc-800">
+            <p class="text-zinc-500 text-sm mb-6">Looking for private instruction pricing?</p>
+            <a href="lessons.html" class="inline-block bg-zinc-900 text-zinc-300 px-8 py-3 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition duration-300 rounded">
+                View Lesson Rates
+            </a>
         </div>
+    
     </main>
     <footer class="border-t border-zinc-800 mt-20 pt-10 pb-10">
         <div class="container mx-auto px-6 flex justify-between items-center">
