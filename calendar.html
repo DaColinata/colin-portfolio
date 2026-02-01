@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colin O'Connor | Calendar</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #0a0a0a; color: #ededed; overflow-x: hidden; }
         .menu-transition { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
     </style>
 </head>
 <body class="font-sans antialiased">
-
+    
     <div id="overlay" onclick="toggleMenu()" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
-
     <div id="sidebar" class="fixed top-0 right-0 h-full w-full md:w-80 bg-zinc-900 z-50 translate-x-full menu-transition shadow-2xl flex flex-col p-8 border-l border-zinc-800">
         <button onclick="toggleMenu()" class="self-end text-xs tracking-widest uppercase mb-12 text-zinc-500 hover:text-white">Close —</button>
         <nav class="flex flex-col space-y-6 mt-4">
@@ -23,7 +22,7 @@
             <a href="work.html" class="text-2xl font-light hover:text-zinc-500 transition">Work</a>
             <a href="rates.html" class="text-2xl font-light hover:text-zinc-500 transition">Rates</a>
             <a href="lessons.html" class="text-2xl font-light hover:text-zinc-500 transition">Lessons</a>
-            <a href="calendar.html" class="text-2xl font-light hover:text-zinc-500 transition text-white">Calendar</a>
+            <a href="calendar.html" class="text-2xl font-light text-white transition">Calendar</a>
             <a href="contact.html" class="text-2xl font-light hover:text-zinc-500 transition">Contact</a>
         </nav>
     </div>
@@ -35,63 +34,436 @@
 
     <main class="pt-40 px-8 pb-20 max-w-5xl mx-auto">
         
-        <h1 class="text-5xl font-light mb-16">Upcoming Shows</h1>
+        <div class="flex flex-col md:flex-row justify-between items-end mb-20">
+            <h1 class="text-5xl font-light">Upcoming Shows</h1>
+            <p class="text-zinc-500 text-sm mt-4 md:mt-0 max-w-xs text-right">
+                Live performances, sessions, and appearances.
+            </p>
+        </div>
 
-        <div class="flex flex-col border-t border-zinc-800">
+        <div class="border-t border-zinc-800">
 
-            <div class="group flex flex-col md:flex-row items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/50 transition duration-300 px-4">
-                <div class="flex flex-col items-center md:items-start w-full md:w-1/6 mb-4 md:mb-0">
-                    <span class="text-2xl font-bold">JAN 24</span>
-                    <span class="text-xs text-zinc-500 tracking-widest">2026</span>
+            <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/30 transition px-4">
+                <div class="flex items-start md:items-center space-x-8 mb-4 md:mb-0 w-full md:w-1/4">
+                    <div class="text-center w-14 shrink-0">
+                        <span class="block text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Feb</span>
+                        <span class="block text-3xl text-white font-light">05</span>
+                    </div>
+                    <div class="md:hidden">
+                        <span class="block text-white text-lg">Tin Roof (Demonbreun)</span>
+                        <span class="block text-zinc-500 text-xs mt-1">Velvet Row</span>
+                   </div>
                 </div>
-                <div class="flex flex-col items-center md:items-start w-full md:w-1/3 mb-4 md:mb-0 text-center md:text-left">
-                    <span class="text-xl font-light group-hover:text-white transition">The Basement East</span>
-                    <span class="text-sm text-zinc-500">Nashville, TN</span>
+                <div class="hidden md:block w-full md:w-1/3 text-left">
+                    <span class="block text-white text-xl group-hover:text-zinc-300 transition">Tin Roof (Demonbreun)</span>
+                    <span class="block text-zinc-500 text-xs uppercase tracking-widest mt-1">Nashville, TN</span>
                 </div>
-                <div class="w-full md:w-1/4 mb-4 md:mb-0 text-center md:text-left">
-                    <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">The Evergreens</span>
+                <div class="hidden md:block w-full md:w-1/4 text-left">
+                     <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">Velvet Row</span>
                 </div>
-                <div class="w-full md:w-auto text-center">
-                    <a href="#" target="_blank" class="inline-block px-8 py-3 bg-zinc-100 text-black text-xs font-bold uppercase tracking-widest hover:bg-zinc-300 transition">
-                        Tickets
-                    </a>
+                <div class="w-full md:w-auto text-center md:text-right mt-4 md:mt-0">
+                    <span class="inline-block border border-transparent text-zinc-500 px-8 py-3 text-xs font-bold uppercase tracking-widest cursor-default">
+                        10:00 PM
+                    </span>
                 </div>
             </div>
 
-            <div class="group flex flex-col md:flex-row items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/50 transition duration-300 px-4">
-                <div class="flex flex-col items-center md:items-start w-full md:w-1/6 mb-4 md:mb-0">
-                    <span class="text-2xl font-bold">FEB 14</span>
-                    <span class="text-xs text-zinc-500 tracking-widest">2026</span>
+            <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/30 transition px-4">
+                <div class="flex items-start md:items-center space-x-8 mb-4 md:mb-0 w-full md:w-1/4">
+                    <div class="text-center w-14 shrink-0">
+                        <span class="block text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Feb</span>
+                        <span class="block text-3xl text-white font-light">12</span>
+                    </div>
+                    <div class="md:hidden">
+                        <span class="block text-white text-lg">Alpha Chi Omega</span>
+                        <span class="block text-zinc-500 text-xs mt-1">Velvet Row</span>
+                   </div>
                 </div>
-                <div class="flex flex-col items-center md:items-start w-full md:w-1/3 mb-4 md:mb-0 text-center md:text-left">
-                    <span class="text-xl font-light group-hover:text-white transition">Exit/In</span>
-                    <span class="text-sm text-zinc-500">Nashville, TN</span>
+                <div class="hidden md:block w-full md:w-1/3 text-left">
+                    <span class="block text-white text-xl group-hover:text-zinc-300 transition">Alpha Chi Omega</span>
+                    <span class="block text-zinc-500 text-xs uppercase tracking-widest mt-1">Tuscaloosa, AL</span>
                 </div>
-                <div class="w-full md:w-1/4 mb-4 md:mb-0 text-center md:text-left">
-                    <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">Solo / Session</span>
+                <div class="hidden md:block w-full md:w-1/4 text-left">
+                     <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">Velvet Row</span>
                 </div>
-                <div class="w-full md:w-auto text-center">
-                    <a href="#" target="_blank" class="inline-block px-8 py-3 border border-zinc-600 text-zinc-400 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black hover:border-white transition">
-                        RSVP
-                    </a>
+                <div class="w-full md:w-auto text-center md:text-right mt-4 md:mt-0">
+                    <span class="inline-block border border-transparent text-zinc-600 px-8 py-3 text-xs font-bold uppercase tracking-widest cursor-default">
+                        Private Event
+                    </span>
                 </div>
             </div>
 
-            <div class="group flex flex-col md:flex-row items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/50 transition duration-300 px-4">
-                <div class="flex flex-col items-center md:items-start w-full md:w-1/6 mb-4 md:mb-0">
-                    <span class="text-2xl font-bold">MAR 05</span>
-                    <span class="text-xs text-zinc-500 tracking-widest">2026</span>
+            <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/30 transition px-4">
+                <div class="flex items-start md:items-center space-x-8 mb-4 md:mb-0 w-full md:w-1/4">
+                    <div class="text-center w-14 shrink-0">
+                        <span class="block text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Feb</span>
+                        <span class="block text-3xl text-white font-light">13</span>
+                    </div>
+                    <div class="md:hidden">
+                        <span class="block text-white text-lg">Alpha Tau Omega</span>
+                        <span class="block text-zinc-500 text-xs mt-1">Velvet Row</span>
+                   </div>
                 </div>
-                <div class="flex flex-col items-center md:items-start w-full md:w-1/3 mb-4 md:mb-0 text-center md:text-left">
-                    <span class="text-xl font-light group-hover:text-white transition">Bluebird Cafe</span>
-                    <span class="text-sm text-zinc-500">Nashville, TN</span>
+                <div class="hidden md:block w-full md:w-1/3 text-left">
+                    <span class="block text-white text-xl group-hover:text-zinc-300 transition">Alpha Tau Omega</span>
+                    <span class="block text-zinc-500 text-xs uppercase tracking-widest mt-1">Tuscaloosa, AL</span>
                 </div>
-                <div class="w-full md:w-1/4 mb-4 md:mb-0 text-center md:text-left">
-                    <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">The Evergreens</span>
+                <div class="hidden md:block w-full md:w-1/4 text-left">
+                     <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">Velvet Row</span>
                 </div>
-                <div class="w-full md:w-auto text-center">
-                    <span class="inline-block px-8 py-3 text-zinc-600 text-xs font-bold uppercase tracking-widest cursor-not-allowed">
-                        Sold Out
+                <div class="w-full md:w-auto text-center md:text-right mt-4 md:mt-0">
+                    <span class="inline-block border border-transparent text-zinc-600 px-8 py-3 text-xs font-bold uppercase tracking-widest cursor-default">
+                        Private Event
+                    </span>
+                </div>
+            </div>
+
+            <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/30 transition px-4">
+                <div class="flex items-start md:items-center space-x-8 mb-4 md:mb-0 w-full md:w-1/4">
+                    <div class="text-center w-14 shrink-0">
+                        <span class="block text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Feb</span>
+                        <span class="block text-3xl text-white font-light">19</span>
+                    </div>
+                    <div class="md:hidden">
+                        <span class="block text-white text-lg">Tin Roof (Demonbreun)</span>
+                        <span class="block text-zinc-500 text-xs mt-1">Velvet Row</span>
+                   </div>
+                </div>
+                <div class="hidden md:block w-full md:w-1/3 text-left">
+                    <span class="block text-white text-xl group-hover:text-zinc-300 transition">Tin Roof (Demonbreun)</span>
+                    <span class="block text-zinc-500 text-xs uppercase tracking-widest mt-1">Nashville, TN</span>
+                </div>
+                <div class="hidden md:block w-full md:w-1/4 text-left">
+                     <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">Velvet Row</span>
+                </div>
+                <div class="w-full md:w-auto text-center md:text-right mt-4 md:mt-0">
+                    <span class="inline-block border border-transparent text-zinc-500 px-8 py-3 text-xs font-bold uppercase tracking-widest cursor-default">
+                        10:00 PM
+                    </span>
+                </div>
+            </div>
+
+            <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/30 transition px-4">
+                <div class="flex items-start md:items-center space-x-8 mb-4 md:mb-0 w-full md:w-1/4">
+                    <div class="text-center w-14 shrink-0">
+                        <span class="block text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Feb</span>
+                        <span class="block text-3xl text-white font-light">20</span>
+                    </div>
+                    <div class="md:hidden">
+                        <span class="block text-white text-lg">Sigma Nu</span>
+                        <span class="block text-zinc-500 text-xs mt-1">Velvet Row</span>
+                   </div>
+                </div>
+                <div class="hidden md:block w-full md:w-1/3 text-left">
+                    <span class="block text-white text-xl group-hover:text-zinc-300 transition">Sigma Nu</span>
+                    <span class="block text-zinc-500 text-xs uppercase tracking-widest mt-1">Tuscaloosa, AL</span>
+                </div>
+                <div class="hidden md:block w-full md:w-1/4 text-left">
+                     <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">Velvet Row</span>
+                </div>
+                <div class="w-full md:w-auto text-center md:text-right mt-4 md:mt-0">
+                    <span class="inline-block border border-transparent text-zinc-600 px-8 py-3 text-xs font-bold uppercase tracking-widest cursor-default">
+                        Private Event
+                    </span>
+                </div>
+            </div>
+
+            <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/30 transition px-4">
+                <div class="flex items-start md:items-center space-x-8 mb-4 md:mb-0 w-full md:w-1/4">
+                    <div class="text-center w-14 shrink-0">
+                        <span class="block text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Feb</span>
+                        <span class="block text-3xl text-white font-light">26</span>
+                    </div>
+                    <div class="md:hidden">
+                        <span class="block text-white text-lg">Tin Roof (Demonbreun)</span>
+                        <span class="block text-zinc-500 text-xs mt-1">Velvet Row</span>
+                   </div>
+                </div>
+                <div class="hidden md:block w-full md:w-1/3 text-left">
+                    <span class="block text-white text-xl group-hover:text-zinc-300 transition">Tin Roof (Demonbreun)</span>
+                    <span class="block text-zinc-500 text-xs uppercase tracking-widest mt-1">Nashville, TN</span>
+                </div>
+                <div class="hidden md:block w-full md:w-1/4 text-left">
+                     <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">Velvet Row</span>
+                </div>
+                <div class="w-full md:w-auto text-center md:text-right mt-4 md:mt-0">
+                    <span class="inline-block border border-transparent text-zinc-500 px-8 py-3 text-xs font-bold uppercase tracking-widest cursor-default">
+                        10:00 PM
+                    </span>
+                </div>
+            </div>
+
+            <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/30 transition px-4">
+                <div class="flex items-start md:items-center space-x-8 mb-4 md:mb-0 w-full md:w-1/4">
+                    <div class="text-center w-14 shrink-0">
+                        <span class="block text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Feb</span>
+                        <span class="block text-3xl text-white font-light">28</span>
+                    </div>
+                    <div class="md:hidden">
+                        <span class="block text-white text-lg">Sigma Tau Gamma</span>
+                        <span class="block text-zinc-500 text-xs mt-1">Velvet Row</span>
+                   </div>
+                </div>
+                <div class="hidden md:block w-full md:w-1/3 text-left">
+                    <span class="block text-white text-xl group-hover:text-zinc-300 transition">Sigma Tau Gamma</span>
+                    <span class="block text-zinc-500 text-xs uppercase tracking-widest mt-1">Tuscaloosa, AL</span>
+                </div>
+                <div class="hidden md:block w-full md:w-1/4 text-left">
+                     <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">Velvet Row</span>
+                </div>
+                <div class="w-full md:w-auto text-center md:text-right mt-4 md:mt-0">
+                    <span class="inline-block border border-transparent text-zinc-600 px-8 py-3 text-xs font-bold uppercase tracking-widest cursor-default">
+                        Private Event
+                    </span>
+                </div>
+            </div>
+
+            <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/30 transition px-4">
+                <div class="flex items-start md:items-center space-x-8 mb-4 md:mb-0 w-full md:w-1/4">
+                    <div class="text-center w-14 shrink-0">
+                        <span class="block text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Mar</span>
+                        <span class="block text-3xl text-white font-light">04</span>
+                    </div>
+                    <div class="md:hidden">
+                        <span class="block text-white text-lg">Gamma Phi Beta</span>
+                        <span class="block text-zinc-500 text-xs mt-1">Velvet Row</span>
+                   </div>
+                </div>
+                <div class="hidden md:block w-full md:w-1/3 text-left">
+                    <span class="block text-white text-xl group-hover:text-zinc-300 transition">Gamma Phi Beta</span>
+                    <span class="block text-zinc-500 text-xs uppercase tracking-widest mt-1">Tuscaloosa, AL</span>
+                </div>
+                <div class="hidden md:block w-full md:w-1/4 text-left">
+                     <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">Velvet Row</span>
+                </div>
+                <div class="w-full md:w-auto text-center md:text-right mt-4 md:mt-0">
+                    <span class="inline-block border border-transparent text-zinc-600 px-8 py-3 text-xs font-bold uppercase tracking-widest cursor-default">
+                        Private Event
+                    </span>
+                </div>
+            </div>
+
+            <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/30 transition px-4">
+                <div class="flex items-start md:items-center space-x-8 mb-4 md:mb-0 w-full md:w-1/4">
+                    <div class="text-center w-14 shrink-0">
+                        <span class="block text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Mar</span>
+                        <span class="block text-3xl text-white font-light">05</span>
+                    </div>
+                    <div class="md:hidden">
+                        <span class="block text-white text-lg">Tin Roof (Demonbreun)</span>
+                        <span class="block text-zinc-500 text-xs mt-1">Velvet Row</span>
+                   </div>
+                </div>
+                <div class="hidden md:block w-full md:w-1/3 text-left">
+                    <span class="block text-white text-xl group-hover:text-zinc-300 transition">Tin Roof (Demonbreun)</span>
+                    <span class="block text-zinc-500 text-xs uppercase tracking-widest mt-1">Nashville, TN</span>
+                </div>
+                <div class="hidden md:block w-full md:w-1/4 text-left">
+                     <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">Velvet Row</span>
+                </div>
+                <div class="w-full md:w-auto text-center md:text-right mt-4 md:mt-0">
+                    <span class="inline-block border border-transparent text-zinc-500 px-8 py-3 text-xs font-bold uppercase tracking-widest cursor-default">
+                        10:00 PM
+                    </span>
+                </div>
+            </div>
+
+            <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/30 transition px-4">
+                <div class="flex items-start md:items-center space-x-8 mb-4 md:mb-0 w-full md:w-1/4">
+                    <div class="text-center w-14 shrink-0">
+                        <span class="block text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Mar</span>
+                        <span class="block text-3xl text-white font-light">07</span>
+                    </div>
+                    <div class="md:hidden">
+                        <span class="block text-white text-lg">Kappa Kappa Gamma</span>
+                        <span class="block text-zinc-500 text-xs mt-1">Velvet Row</span>
+                   </div>
+                </div>
+                <div class="hidden md:block w-full md:w-1/3 text-left">
+                    <span class="block text-white text-xl group-hover:text-zinc-300 transition">Kappa Kappa Gamma</span>
+                    <span class="block text-zinc-500 text-xs uppercase tracking-widest mt-1">Tuscaloosa, AL</span>
+                </div>
+                <div class="hidden md:block w-full md:w-1/4 text-left">
+                     <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">Velvet Row</span>
+                </div>
+                <div class="w-full md:w-auto text-center md:text-right mt-4 md:mt-0">
+                    <span class="inline-block border border-transparent text-zinc-600 px-8 py-3 text-xs font-bold uppercase tracking-widest cursor-default">
+                        Private Event
+                    </span>
+                </div>
+            </div>
+
+            <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/30 transition px-4">
+                <div class="flex items-start md:items-center space-x-8 mb-4 md:mb-0 w-full md:w-1/4">
+                    <div class="text-center w-14 shrink-0">
+                        <span class="block text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Mar</span>
+                        <span class="block text-3xl text-white font-light">12</span>
+                    </div>
+                    <div class="md:hidden">
+                        <span class="block text-white text-lg">Tin Roof (Demonbreun)</span>
+                        <span class="block text-zinc-500 text-xs mt-1">Velvet Row</span>
+                   </div>
+                </div>
+                <div class="hidden md:block w-full md:w-1/3 text-left">
+                    <span class="block text-white text-xl group-hover:text-zinc-300 transition">Tin Roof (Demonbreun)</span>
+                    <span class="block text-zinc-500 text-xs uppercase tracking-widest mt-1">Nashville, TN</span>
+                </div>
+                <div class="hidden md:block w-full md:w-1/4 text-left">
+                     <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">Velvet Row</span>
+                </div>
+                <div class="w-full md:w-auto text-center md:text-right mt-4 md:mt-0">
+                    <span class="inline-block border border-transparent text-zinc-500 px-8 py-3 text-xs font-bold uppercase tracking-widest cursor-default">
+                        10:00 PM
+                    </span>
+                </div>
+            </div>
+
+            <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/30 transition px-4">
+                <div class="flex items-start md:items-center space-x-8 mb-4 md:mb-0 w-full md:w-1/4">
+                    <div class="text-center w-14 shrink-0">
+                        <span class="block text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Mar</span>
+                        <span class="block text-3xl text-white font-light">19</span>
+                    </div>
+                    <div class="md:hidden">
+                        <span class="block text-white text-lg">Tin Roof (Demonbreun)</span>
+                        <span class="block text-zinc-500 text-xs mt-1">Velvet Row</span>
+                   </div>
+                </div>
+                <div class="hidden md:block w-full md:w-1/3 text-left">
+                    <span class="block text-white text-xl group-hover:text-zinc-300 transition">Tin Roof (Demonbreun)</span>
+                    <span class="block text-zinc-500 text-xs uppercase tracking-widest mt-1">Nashville, TN</span>
+                </div>
+                <div class="hidden md:block w-full md:w-1/4 text-left">
+                     <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">Velvet Row</span>
+                </div>
+                <div class="w-full md:w-auto text-center md:text-right mt-4 md:mt-0">
+                    <span class="inline-block border border-transparent text-zinc-500 px-8 py-3 text-xs font-bold uppercase tracking-widest cursor-default">
+                        10:00 PM
+                    </span>
+                </div>
+            </div>
+
+            <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/30 transition px-4">
+                <div class="flex items-start md:items-center space-x-8 mb-4 md:mb-0 w-full md:w-1/4">
+                    <div class="text-center w-14 shrink-0">
+                        <span class="block text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Mar</span>
+                        <span class="block text-3xl text-white font-light">20</span>
+                    </div>
+                    <div class="md:hidden">
+                        <span class="block text-white text-lg">Grand Ole Opry</span>
+                        <span class="block text-zinc-500 text-xs mt-1">Show Choir Nationals</span>
+                   </div>
+                </div>
+                <div class="hidden md:block w-full md:w-1/3 text-left">
+                    <span class="block text-white text-xl group-hover:text-zinc-300 transition">Grand Ole Opry</span>
+                    <span class="block text-zinc-500 text-xs uppercase tracking-widest mt-1">Nashville, TN</span>
+                </div>
+                <div class="hidden md:block w-full md:w-1/4 text-left">
+                     <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">Show Choir Nationals</span>
+                </div>
+                <div class="w-full md:w-auto text-center md:text-right mt-4 md:mt-0">
+                    <span class="inline-block border border-transparent text-zinc-500 px-8 py-3 text-xs font-bold uppercase tracking-widest cursor-default">
+                        Morning
+                    </span>
+                </div>
+            </div>
+
+            <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/30 transition px-4">
+                <div class="flex items-start md:items-center space-x-8 mb-4 md:mb-0 w-full md:w-1/4">
+                    <div class="text-center w-14 shrink-0">
+                        <span class="block text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Mar</span>
+                        <span class="block text-3xl text-white font-light">20</span>
+                    </div>
+                    <div class="md:hidden">
+                        <span class="block text-white text-lg">Live Oak</span>
+                        <span class="block text-zinc-500 text-xs mt-1">Citrus Brothers</span>
+                   </div>
+                </div>
+                <div class="hidden md:block w-full md:w-1/3 text-left">
+                    <span class="block text-white text-xl group-hover:text-zinc-300 transition">Live Oak</span>
+                    <span class="block text-zinc-500 text-xs uppercase tracking-widest mt-1">Nashville, TN</span>
+                </div>
+                <div class="hidden md:block w-full md:w-1/4 text-left">
+                     <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">Citrus Brothers</span>
+                </div>
+                <div class="w-full md:w-auto text-center md:text-right mt-4 md:mt-0">
+                    <span class="inline-block border border-transparent text-zinc-500 px-8 py-3 text-xs font-bold uppercase tracking-widest cursor-default">
+                        8:00 PM
+                    </span>
+                </div>
+            </div>
+
+            <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/30 transition px-4">
+                <div class="flex items-start md:items-center space-x-8 mb-4 md:mb-0 w-full md:w-1/4">
+                    <div class="text-center w-14 shrink-0">
+                        <span class="block text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Mar</span>
+                        <span class="block text-3xl text-white font-light">28</span>
+                    </div>
+                    <div class="md:hidden">
+                        <span class="block text-white text-lg">Alpha Delta Pi</span>
+                        <span class="block text-zinc-500 text-xs mt-1">Velvet Row</span>
+                   </div>
+                </div>
+                <div class="hidden md:block w-full md:w-1/3 text-left">
+                    <span class="block text-white text-xl group-hover:text-zinc-300 transition">Alpha Delta Pi</span>
+                    <span class="block text-zinc-500 text-xs uppercase tracking-widest mt-1">Tuscaloosa, AL</span>
+                </div>
+                <div class="hidden md:block w-full md:w-1/4 text-left">
+                     <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">Velvet Row</span>
+                </div>
+                <div class="w-full md:w-auto text-center md:text-right mt-4 md:mt-0">
+                    <span class="inline-block border border-transparent text-zinc-600 px-8 py-3 text-xs font-bold uppercase tracking-widest cursor-default">
+                        Private Event
+                    </span>
+                </div>
+            </div>
+
+            <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/30 transition px-4">
+                <div class="flex items-start md:items-center space-x-8 mb-4 md:mb-0 w-full md:w-1/4">
+                    <div class="text-center w-14 shrink-0">
+                        <span class="block text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Apr</span>
+                        <span class="block text-3xl text-white font-light">02</span>
+                    </div>
+                    <div class="md:hidden">
+                        <span class="block text-white text-lg">Sigma Phi Epsilon</span>
+                        <span class="block text-zinc-500 text-xs mt-1">Velvet Row</span>
+                   </div>
+                </div>
+                <div class="hidden md:block w-full md:w-1/3 text-left">
+                    <span class="block text-white text-xl group-hover:text-zinc-300 transition">Sigma Phi Epsilon</span>
+                    <span class="block text-zinc-500 text-xs uppercase tracking-widest mt-1">Tuscaloosa, AL</span>
+                </div>
+                <div class="hidden md:block w-full md:w-1/4 text-left">
+                     <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">Velvet Row</span>
+                </div>
+                <div class="w-full md:w-auto text-center md:text-right mt-4 md:mt-0">
+                    <span class="inline-block border border-transparent text-zinc-600 px-8 py-3 text-xs font-bold uppercase tracking-widest cursor-default">
+                        Private Event
+                    </span>
+                </div>
+            </div>
+
+            <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-zinc-800 hover:bg-zinc-900/30 transition px-4">
+                <div class="flex items-start md:items-center space-x-8 mb-4 md:mb-0 w-full md:w-1/4">
+                    <div class="text-center w-14 shrink-0">
+                        <span class="block text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Apr</span>
+                        <span class="block text-3xl text-white font-light">16</span>
+                    </div>
+                    <div class="md:hidden">
+                        <span class="block text-white text-lg">Massey PAC</span>
+                        <span class="block text-zinc-500 text-xs mt-1">Voxology</span>
+                   </div>
+                </div>
+                <div class="hidden md:block w-full md:w-1/3 text-left">
+                    <span class="block text-white text-xl group-hover:text-zinc-300 transition">Massey Performing Arts Center</span>
+                    <span class="block text-zinc-500 text-xs uppercase tracking-widest mt-1">Nashville, TN</span>
+                </div>
+                <div class="hidden md:block w-full md:w-1/4 text-left">
+                     <span class="text-xs border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full uppercase tracking-widest">Voxology</span>
+                </div>
+                <div class="w-full md:w-auto text-center md:text-right mt-4 md:mt-0">
+                    <span class="inline-block border border-transparent text-zinc-500 px-8 py-3 text-xs font-bold uppercase tracking-widest cursor-default">
+                        7:30 PM
                     </span>
                 </div>
             </div>
@@ -99,6 +471,7 @@
         </div>
 
     </main>
+
     <footer class="border-t border-zinc-800 mt-20 pt-10 pb-10">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <p class="text-zinc-500 text-sm">© 2026 Colin O'Connor Music</p>
@@ -107,7 +480,7 @@
                 <a href="https://www.instagram.com/dacolinata" target="_blank" class="text-zinc-400 hover:text-white transition">
                     <span class="sr-only">Instagram</span>
                     <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465C9.673 2.013 10.044 2 12.315 2zm0 5.838a5.838 5.838 0 100 11.676 5.838 5.838 0 000-11.676zm0 9.516a3.678 3.678 0 110-7.356 3.678 3.678 0 010 7.356zm5.838-7.356a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.153-1.772c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465C9.673 2.013 10.044 2 12.315 2zm0 5.838a5.838 5.838 0 100 11.676 5.838 5.838 0 000-11.676zm0 9.516a3.678 3.678 0 110-7.356 3.678 3.678 0 010 7.356zm5.838-7.356a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z" clip-rule="evenodd" />
                     </svg>
                 </a>
                 <a href="https://www.tiktok.com/@dacolinata" target="_blank" class="text-zinc-400 hover:text-white transition">
