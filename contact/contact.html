@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colin O'Connor | Lessons</title>
+    <title>Colin O'Connor | Contact</title>
     <script src="script.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -12,88 +12,62 @@
     </style>
 </head>
 <body class="font-sans antialiased">
+    
     <div id="overlay" onclick="toggleMenu()" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
     <div id="sidebar" class="fixed top-0 right-0 h-full w-full md:w-80 bg-zinc-900 z-50 translate-x-full menu-transition shadow-2xl flex flex-col p-8 border-l border-zinc-800">
         <button onclick="toggleMenu()" class="self-end text-xs tracking-widest uppercase mb-12 text-zinc-500 hover:text-white">Close —</button>
         <nav class="flex flex-col space-y-6 mt-4">
-            <a href="index.html" class="text-2xl font-light hover:text-zinc-500 transition">Home</a>
-            <a href="about.html" class="text-2xl font-light hover:text-zinc-500 transition">About</a>
-            <a href="work.html" class="text-2xl font-light hover:text-zinc-500 transition">Work</a>
-            <a href="rates.html" class="text-2xl font-light hover:text-zinc-500 transition">Rates</a>
-            <a href="lessons.html" class="text-2xl font-light hover:text-zinc-500 transition">Lessons</a>
-            <a href="calendar.html" class="text-2xl font-light hover:text-zinc-500 transition">Calendar</a>
-            <a href="contact.html" class="text-2xl font-light hover:text-zinc-500 transition">Contact</a>
+            <a href="/home/" class="text-2xl font-light hover:text-zinc-500 transition">Home</a>
+            <a href="/about/" class="text-2xl font-light hover:text-zinc-500 transition">About</a>
+            <a href="/work/" class="text-2xl font-light hover:text-zinc-500 transition">Work</a>
+            <a href="/rates/" class="text-2xl font-light hover:text-zinc-500 transition">Rates</a>
+            <a href="/lessons/" class="text-2xl font-light hover:text-zinc-500 transition">Lessons</a>
+            <a href="/calendar/" class="text-2xl font-light hover:text-zinc-500 transition">Calendar</a>
+            <a href="/contact/" class="text-2xl font-light hover:text-zinc-500 transition">Contact</a>
         </nav>
     </div>
+
     <header class="fixed top-0 w-full z-40 mix-blend-difference px-8 py-10 flex justify-between items-center">
         <a href="index.html" class="text-sm font-bold tracking-[0.3em] uppercase">Colin O'Connor</a>
         <button onclick="toggleMenu()" class="text-sm tracking-widest uppercase hover:opacity-70 transition">Menu +</button>
     </header>
 
-    <main class="pt-40 px-8 pb-20 max-w-4xl mx-auto">
-    
-        <div class="mb-16">
-            <h1 class="text-5xl font-light mb-6">Private Instruction</h1>
-            <p class="text-zinc-400 text-lg leading-relaxed max-w-2xl">
-                Tailored lessons for all skill levels, from beginners to advanced musicians, specializing in guitar, bass, music theory, and composition. Whether you're looking to enhance your skills for personal growth or professional development, I provide personalized guidance to help you achieve your musical goals.
-                My teaching approach prioritizes <span class="text-white">remote instruction</span> via Zoom, allowing for flexible scheduling, high-quality audio, and the comfort of your own space.
-            </p>
-        </div>
-    
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-            
-            <div class="border border-zinc-700 bg-zinc-900/50 p-8 relative overflow-hidden group">
-                <div class="absolute top-0 right-0 bg-white text-black text-[10px] font-bold px-3 py-1 uppercase tracking-widest">
-                    Recommended
-                </div>
-                
-                <h3 class="text-xl text-white font-light mb-2">Remote / Zoom</h3>
-                <p class="text-zinc-500 text-sm mb-8">Available worldwide. High availability.</p>
-                
-                <div class="space-y-4">
-                    <div class="flex justify-between items-baseline border-b border-zinc-800 pb-2">
-                        <span class="text-zinc-300">30 Minutes</span>
-                        <span class="text-white font-mono text-xl">$30</span>
-                    </div>
-                    <div class="flex justify-between items-baseline border-b border-zinc-800 pb-2">
-                        <span class="text-zinc-300">60 Minutes</span>
-                        <span class="text-white font-mono text-xl">$50</span>
-                    </div>
-                </div>
+    <main class="pt-40 px-8 pb-20 max-w-xl mx-auto">
+        <h1 class="text-5xl font-light mb-8">Get in Touch</h1>
+        
+        <p class="text-zinc-500 mb-12 leading-relaxed text-lg">
+            For any inquiries, please fill out the form below, email me directly at 
+            <a href="mailto:contact@colinoconnormusic.com" class="text-white hover:underline transition">contact@colinoconnormusic.com</a>, 
+            or text/call me between 8:00am and 10:00pm at 
+            <a href="tel:+16154225539" class="text-white hover:underline transition whitespace-nowrap">(615) 422-5539</a>.
+        </p>
+
+        <form action="https://formspree.io/f/mbdddeon" method="POST" class="space-y-6">
+            <div>
+                <label for="name" class="block text-xs uppercase tracking-widest text-zinc-500 mb-2">Name</label>
+                <input type="text" name="name" id="name" required
+                       class="w-full bg-zinc-900 border border-zinc-800 p-4 text-white focus:outline-none focus:border-zinc-600 transition">
             </div>
-    
-            <div class="border border-zinc-800 p-8 opacity-75 hover:opacity-100 transition duration-300">
-                <h3 class="text-xl text-white font-light mb-2">In-Person</h3>
-                <p class="text-zinc-500 text-sm mb-8">Nashville, TN area only. Limited availability.</p>
-                
-                <div class="space-y-4">
-                    <div class="flex justify-between items-baseline border-b border-zinc-800 pb-2">
-                        <span class="text-zinc-300">30 Minutes</span>
-                        <span class="text-white font-mono text-xl">$40</span>
-                    </div>
-                    <div class="flex justify-between items-baseline border-b border-zinc-800 pb-2">
-                        <span class="text-zinc-300">60 Minutes</span>
-                        <span class="text-white font-mono text-xl">$60</span>
-                    </div>
-                </div>
+        
+            <div>
+                <label for="email" class="block text-xs uppercase tracking-widest text-zinc-500 mb-2">Email</label>
+                <input type="email" name="email" id="email" required
+                       class="w-full bg-zinc-900 border border-zinc-800 p-4 text-white focus:outline-none focus:border-zinc-600 transition">
             </div>
-    
-        </section>
-    
-        <section id="apply">
-            <h2 class="text-xs font-bold tracking-[0.2em] text-white uppercase mb-8 border-b border-zinc-800 pb-4">
-                Student Interest Form
-            </h2>
-            <p class="text-zinc-500 text-sm mb-8">
-                Please fill out the details below to schedule a lesson. I typically respond within 24 hours.
-            </p>
-            
-            <div class="bg-zinc-900 px-2 py-4 rounded-sm border border-zinc-800">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeKEKI_85nLBP3xYyme2lHDpTSbg6KJfXXBoXFGfSfVybWTRA/viewform?embedded=true" width="100%" height="1600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        
+            <div>
+                <label for="message" class="block text-xs uppercase tracking-widest text-zinc-500 mb-2">Message</label>
+                <textarea name="message" id="message" rows="5" required
+                          class="w-full bg-zinc-900 border border-zinc-800 p-4 text-white focus:outline-none focus:border-zinc-600 transition"></textarea>
             </div>
-        </section>
-    
+        
+            <button type="submit" class="w-full py-4 bg-zinc-100 text-black text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-300 transition">
+                Send Message
+            </button>
+        </form>
+
     </main>
+
     <footer class="border-t border-zinc-800 mt-20 pt-10 pb-10">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <p class="text-zinc-500 text-sm">© 2026 Colin O'Connor Music</p>
