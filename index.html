@@ -21,7 +21,7 @@
     <div id="sidebar" class="fixed top-0 right-0 h-full w-full md:w-80 bg-zinc-900 z-50 translate-x-full menu-transition shadow-2xl flex flex-col p-8 border-l border-zinc-800">
         <button onclick="toggleMenu()" class="self-end text-xs tracking-widest uppercase mb-12 text-zinc-500 hover:text-white">Close —</button>
         <nav class="flex flex-col space-y-6 mt-4">
-            <a href="home.html" class="text-2xl font-light text-white transition">Home</a>
+            <a href="index.html" class="text-2xl font-light text-white transition">Home</a>
             <a href="about.html" class="text-2xl font-light hover:text-zinc-500 transition">About</a>
             <a href="work.html" class="text-2xl font-light hover:text-zinc-500 transition">Work</a>
             <a href="rates.html" class="text-2xl font-light hover:text-zinc-500 transition">Rates</a>
@@ -35,7 +35,7 @@
     </div>
 
     <nav class="fixed top-0 left-0 w-full z-50 px-8 py-10 flex justify-between items-center mix-blend-difference text-white pointer-events-none">
-        <a href="home.html" class="text-sm font-bold tracking-[0.3em] uppercase pointer-events-auto">
+        <a href="index.html" class="text-sm font-bold tracking-[0.3em] uppercase pointer-events-auto">
             Colin O'Connor
         </a>
         <button onclick="toggleMenu()" class="text-sm tracking-widest uppercase hover:opacity-70 transition pointer-events-auto">
@@ -44,101 +44,98 @@
     </nav>
 
     <header class="relative w-full h-screen bg-cover bg-center flex flex-col" style="background-image: url('images/indexheader.jpeg');">
-    
         <div class="absolute inset-0 bg-black/50"></div>
-    
         <div class="relative z-10 flex-grow flex flex-col justify-center px-8 max-w-6xl mx-auto w-full">
             <h1 class="text-5xl md:text-8xl font-thin tracking-tighter mb-8 text-white">
                 It's <u>all</u><br>about the<br><b>music.</b>
             </h1>
             <p class="text-zinc-200 text-lg max-w-md mb-12 shadow-black drop-shadow-md">
-                Nashville-based guitarist, multi-instrumentalist, composer/arranger, and producer bridging the gap between your vision and reality.
+                Nashville-based guitarist, multi-instrumentalist, composer, and producer bridging the gap between your vision and reality.
             </p>
         </div>
-    
         <div class="relative z-10 absolute bottom-10 left-8 text-xs text-zinc-300 animate-bounce">
             ↓ SCROLL
         </div>
-    
     </header> 
 
     <main> 
 
         <section class="py-32 border-t border-zinc-900 px-8">
-            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                 <div class="aspect-[4/5] bg-zinc-900 relative group overflow-hidden">
                      <img src="images/portrait-small.jpg" alt="Colin O'Connor Portrait" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
                 </div>
                 <div class="flex flex-col justify-center">
-                    <h2 class="text-xs font-bold tracking-[0.3em] text-zinc-500 uppercase mb-6">The Artist</h2>
-                    <p class="text-2xl font-light leading-snug mb-8 text-white">
-                        "Music is not just about playing the notes; it's about understanding why they matter."
+                    <h2 class="text-xs font-bold tracking-[0.3em] text-zinc-500 uppercase mb-6">Professional Profile</h2>
+                    <h3 class="text-3xl text-white font-light mb-6">Reliability. Precision. Tone.</h3>
+                    <p class="text-zinc-400 mb-6 leading-relaxed">
+                        I am a hired gun focused on elevating your project, not overshadowing it. Whether tracking in the studio, reading charts for a pit orchestra, or arranging horns for a pop record, I bring professional adaptability to every session.
                     </p>
                     <p class="text-zinc-400 mb-8 leading-relaxed">
-                        Whether on stage at Bridgestone Arena or in the studio producing a demo, I bring precision, tone, and professional adaptability to every project.
+                        Based in Nashville, I specialize in bridging the gap between creative vision and technical execution.
                     </p>
                     <div>
-                        <a href="about.html" class="hover-underline-animation text-sm uppercase tracking-widest text-white pb-1">Read Full Bio →</a>
+                        <a href="about.html" class="hover-underline-animation text-sm uppercase tracking-widest text-white pb-1">View Credits & Bio →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-32 border-t border-zinc-900 px-8 bg-zinc-900/20">
-            <div class="max-w-6xl mx-auto">
-                <div class="flex justify-between items-end mb-12">
-                    <h2 class="text-xs font-bold tracking-[0.3em] text-zinc-500 uppercase">Selected Work</h2>
-                    <a href="work.html" class="text-xs text-zinc-500 hover:text-white transition uppercase tracking-widest">View All Work</a>
-                </div>
+        <section class="border-t border-zinc-900">
+            <div class="grid grid-cols-1 md:grid-cols-3 h-[150vh] md:h-[80vh]">
                 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                    <a href="work.html" class="group block p-8 border border-zinc-800 hover:border-zinc-500 hover:bg-zinc-900 transition duration-500">
-                        <div class="h-10 w-10 mb-6 text-zinc-500 group-hover:text-white transition">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-full h-full"><path stroke-linecap="round" stroke-linejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163z" /></svg>
-                        </div>
-                        <h3 class="text-xl text-white mb-2 font-light">Session Work</h3>
-                        <p class="text-zinc-500 text-sm">Electric & acoustic tracking for rock, funk, and country.</p>
-                    </a>
+                <a href="work.html" class="group relative block w-full h-full overflow-hidden border-r border-zinc-800">
+                    <div class="absolute inset-0 bg-zinc-900 bg-cover bg-center grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700 ease-in-out" style="background-image: url('images/studio.jpg');"></div>
+                    <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition duration-500"></div>
+                    
+                    <div class="absolute bottom-0 left-0 p-10">
+                        <h3 class="text-2xl text-white font-light mb-2">Studio & Arranging</h3>
+                        <p class="text-zinc-400 text-sm max-w-xs transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-500">
+                            Session recording, string/horn arrangements, and production reel.
+                        </p>
+                        <span class="mt-6 inline-block text-xs font-bold uppercase tracking-widest border-b border-white pb-1">Listen →</span>
+                    </div>
+                </a>
 
-                    <a href="work.html" class="group block p-8 border border-zinc-800 hover:border-zinc-500 hover:bg-zinc-900 transition duration-500">
-                        <div class="h-10 w-10 mb-6 text-zinc-500 group-hover:text-white transition">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-full h-full"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" /></svg>
-                        </div>
-                        <h3 class="text-xl text-white mb-2 font-light">Arranging</h3>
-                        <p class="text-zinc-500 text-sm">Horns, strings, and charts for live ensembles.</p>
-                    </a>
+                <a href="calendar.html" class="group relative block w-full h-full overflow-hidden border-r border-zinc-800">
+                    <div class="absolute inset-0 bg-zinc-900 bg-cover bg-center grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700 ease-in-out" style="background-image: url('images/live.jpg');"></div>
+                    <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition duration-500"></div>
+                    
+                    <div class="absolute bottom-0 left-0 p-10">
+                        <h3 class="text-2xl text-white font-light mb-2">Live Performance</h3>
+                        <p class="text-zinc-400 text-sm max-w-xs transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-500">
+                            Upcoming dates with The Evergreens, Sage, and freelance work.
+                        </p>
+                        <span class="mt-6 inline-block text-xs font-bold uppercase tracking-widest border-b border-white pb-1">View Calendar →</span>
+                    </div>
+                </a>
 
-                    <a href="calendar.html" class="group block p-8 border border-zinc-800 hover:border-zinc-500 hover:bg-zinc-900 transition duration-500">
-                        <div class="h-10 w-10 mb-6 text-zinc-500 group-hover:text-white transition">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-full h-full"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                        </div>
-                        <h3 class="text-xl text-white mb-2 font-light">Live Dates</h3>
-                        <p class="text-zinc-500 text-sm">Upcoming shows with Sage, VR, and more.</p>
-                    </a>
-                </div>
+                <a href="lessons.html" class="group relative block w-full h-full overflow-hidden">
+                    <div class="absolute inset-0 bg-zinc-900 bg-cover bg-center grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700 ease-in-out" style="background-image: url('images/lesson.jpg');"></div>
+                    <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition duration-500"></div>
+                    
+                    <div class="absolute bottom-0 left-0 p-10">
+                        <h3 class="text-2xl text-white font-light mb-2">Education</h3>
+                        <p class="text-zinc-400 text-sm max-w-xs transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-500">
+                            Private guitar instruction, academic accompanying, and theory.
+                        </p>
+                        <span class="mt-6 inline-block text-xs font-bold uppercase tracking-widest border-b border-white pb-1">Learn More →</span>
+                    </div>
+                </a>
+
             </div>
         </section>
 
-        <section class="py-32 border-t border-zinc-900 px-8">
-            <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center bg-zinc-900 border border-zinc-800 p-12 rounded-sm text-center md:text-left">
-                <div class="mb-8 md:mb-0">
-                    <h2 class="text-3xl text-white font-light mb-2">Instruction & Pricing</h2>
-                    <p class="text-zinc-500 text-sm">From private 1-on-1 theory lessons to full-day studio rates.</p>
-                </div>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="lessons.html" class="px-6 py-3 border border-zinc-600 text-zinc-300 text-xs font-bold uppercase tracking-widest hover:border-white hover:text-white transition">
-                        Lessons
-                    </a>
-                    <a href="rates.html" class="px-6 py-3 bg-zinc-100 text-black text-xs font-bold uppercase tracking-widest hover:bg-white transition">
-                        Check Rates
-                    </a>
-                </div>
-            </div>
+        <section class="py-24 border-t border-zinc-900 px-8 text-center bg-zinc-900">
+            <h2 class="text-3xl font-light mb-6">Ready to work?</h2>
+            <a href="contact.html" class="inline-block border border-white text-white px-10 py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition">
+                Get in Touch
+            </a>
         </section>
 
     </main>
 
-    <footer class="border-t border-zinc-800 mt-20 pt-10 pb-10">
+    <footer class="border-t border-zinc-800 mt-0 pt-10 pb-10 bg-black">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <p class="text-zinc-500 text-sm">© 2026 Colin O'Connor Music</p>
             
