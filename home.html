@@ -21,7 +21,7 @@
     <div id="sidebar" class="fixed top-0 right-0 h-full w-full md:w-80 bg-zinc-900 z-50 translate-x-full menu-transition shadow-2xl flex flex-col p-8 border-l border-zinc-800">
         <button onclick="toggleMenu()" class="self-end text-xs tracking-widest uppercase mb-12 text-zinc-500 hover:text-white">Close —</button>
         <nav class="flex flex-col space-y-6 mt-4">
-            <a href="index.html" class="text-2xl font-light hover:text-zinc-500 transition">Home</a>
+            <a href="home.html" class="text-2xl font-light text-white transition">Home</a>
             <a href="about.html" class="text-2xl font-light hover:text-zinc-500 transition">About</a>
             <a href="work.html" class="text-2xl font-light hover:text-zinc-500 transition">Work</a>
             <a href="rates.html" class="text-2xl font-light hover:text-zinc-500 transition">Rates</a>
@@ -35,7 +35,7 @@
     </div>
 
     <nav class="fixed top-0 left-0 w-full z-50 px-8 py-10 flex justify-between items-center mix-blend-difference text-white pointer-events-none">
-        <a href="index.html" class="text-sm font-bold tracking-[0.3em] uppercase pointer-events-auto">
+        <a href="home.html" class="text-sm font-bold tracking-[0.3em] uppercase pointer-events-auto">
             Colin O'Connor
         </a>
         <button onclick="toggleMenu()" class="text-sm tracking-widest uppercase hover:opacity-70 transition pointer-events-auto">
@@ -65,51 +65,77 @@
     <main> 
 
         <section class="py-32 border-t border-zinc-900 px-8">
-            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="aspect-square bg-zinc-900 grayscale opacity-80">
-                     <img src="images/portrait-small.jpg" alt="Portrait" class="w-full h-full object-cover">
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="aspect-[4/5] bg-zinc-900 relative group overflow-hidden">
+                     <img src="images/portrait-small.jpg" alt="Colin O'Connor Portrait" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
                 </div>
-                <div>
+                <div class="flex flex-col justify-center">
                     <h2 class="text-xs font-bold tracking-[0.3em] text-zinc-500 uppercase mb-6">The Artist</h2>
-                    <p class="text-2xl font-light leading-snug mb-8">
+                    <p class="text-2xl font-light leading-snug mb-8 text-white">
                         "Music is not just about playing the notes; it's about understanding why they matter."
                     </p>
-                    <a href="about.html" class="hover-underline-animation text-sm uppercase tracking-widest">Read Full Bio →</a>
+                    <p class="text-zinc-400 mb-8 leading-relaxed">
+                        Whether on stage at Bridgestone Arena or in the studio producing a demo, I bring precision, tone, and professional adaptability to every project.
+                    </p>
+                    <div>
+                        <a href="about.html" class="hover-underline-animation text-sm uppercase tracking-widest text-white pb-1">Read Full Bio →</a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="py-32 border-t border-zinc-900 px-8 bg-zinc-900/20">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-xs font-bold tracking-[0.3em] text-zinc-500 uppercase mb-12">Selected Work</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                    <div class="p-8 border border-zinc-800 hover:border-zinc-600 transition duration-500">
-                        <h3 class="text-xl mb-2">Session Recordings</h3>
-                        <p class="text-zinc-500 text-sm">Studio tracking for rock, funk, and jazz.</p>
-                    </div>
-                    <div class="p-8 border border-zinc-800 hover:border-zinc-600 transition duration-500">
-                        <h3 class="text-xl mb-2">The Evergreens</h3>
-                        <p class="text-zinc-500 text-sm">Live performance & original composition.</p>
-                    </div>
+            <div class="max-w-6xl mx-auto">
+                <div class="flex justify-between items-end mb-12">
+                    <h2 class="text-xs font-bold tracking-[0.3em] text-zinc-500 uppercase">Selected Work</h2>
+                    <a href="work.html" class="text-xs text-zinc-500 hover:text-white transition uppercase tracking-widest">View All Work</a>
                 </div>
-                <div class="text-center">
-                    <a href="work.html" class="hover-underline-animation text-sm uppercase tracking-widest">Listen to Audio Reel →</a>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <a href="work.html" class="group block p-8 border border-zinc-800 hover:border-zinc-500 hover:bg-zinc-900 transition duration-500">
+                        <div class="h-10 w-10 mb-6 text-zinc-500 group-hover:text-white transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-full h-full"><path stroke-linecap="round" stroke-linejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163z" /></svg>
+                        </div>
+                        <h3 class="text-xl text-white mb-2 font-light">Session Work</h3>
+                        <p class="text-zinc-500 text-sm">Electric & acoustic tracking for rock, funk, and country.</p>
+                    </a>
+
+                    <a href="work.html" class="group block p-8 border border-zinc-800 hover:border-zinc-500 hover:bg-zinc-900 transition duration-500">
+                        <div class="h-10 w-10 mb-6 text-zinc-500 group-hover:text-white transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-full h-full"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" /></svg>
+                        </div>
+                        <h3 class="text-xl text-white mb-2 font-light">Arranging</h3>
+                        <p class="text-zinc-500 text-sm">Horns, strings, and charts for live ensembles.</p>
+                    </a>
+
+                    <a href="calendar.html" class="group block p-8 border border-zinc-800 hover:border-zinc-500 hover:bg-zinc-900 transition duration-500">
+                        <div class="h-10 w-10 mb-6 text-zinc-500 group-hover:text-white transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-full h-full"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+                        </div>
+                        <h3 class="text-xl text-white mb-2 font-light">Live Dates</h3>
+                        <p class="text-zinc-500 text-sm">Upcoming shows with Sage, VR, and more.</p>
+                    </a>
                 </div>
             </div>
         </section>
 
         <section class="py-32 border-t border-zinc-900 px-8">
-            <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
-                <div class="mb-10 md:mb-0">
-                    <h2 class="text-4xl font-light mb-4">Instruction & Pricing</h2>
-                    <p class="text-zinc-500 max-w-sm">From private 1-on-1 theory lessons to full-day studio rates.</p>
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center bg-zinc-900 border border-zinc-800 p-12 rounded-sm text-center md:text-left">
+                <div class="mb-8 md:mb-0">
+                    <h2 class="text-3xl text-white font-light mb-2">Instruction & Pricing</h2>
+                    <p class="text-zinc-500 text-sm">From private 1-on-1 theory lessons to full-day studio rates.</p>
                 </div>
-                <div class="flex flex-col space-y-4 items-start">
-                    <a href="lessons.html" class="hover-underline-animation text-sm uppercase tracking-widest">View Lesson Info →</a>
-                    <a href="rates.html" class="hover-underline-animation text-sm uppercase tracking-widest">Check Availability →</a>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="lessons.html" class="px-6 py-3 border border-zinc-600 text-zinc-300 text-xs font-bold uppercase tracking-widest hover:border-white hover:text-white transition">
+                        Lessons
+                    </a>
+                    <a href="rates.html" class="px-6 py-3 bg-zinc-100 text-black text-xs font-bold uppercase tracking-widest hover:bg-white transition">
+                        Check Rates
+                    </a>
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer class="border-t border-zinc-800 mt-20 pt-10 pb-10">
@@ -119,36 +145,27 @@
             <div class="flex space-x-6">
                 <a href="https://www.instagram.com/dacolinata" target="_blank" class="text-zinc-400 hover:text-white transition">
                     <span class="sr-only">Instagram</span>
-                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.153-1.772c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465C9.673 2.013 10.044 2 12.315 2zm0 5.838a5.838 5.838 0 100 11.676 5.838 5.838 0 000-11.676zm0 9.516a3.678 3.678 0 110-7.356 3.678 3.678 0 010 7.356zm5.838-7.356a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z" clip-rule="evenodd" />
-                    </svg>
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.153-1.772c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 01-1.153-1.772c.636-.247 1.363-.416 2.427-.465C9.673 2.013 10.044 2 12.315 2zm0 5.838a5.838 5.838 0 100 11.676 5.838 5.838 0 000-11.676zm0 9.516a3.678 3.678 0 110-7.356 3.678 3.678 0 010 7.356zm5.838-7.356a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z" clip-rule="evenodd" /></svg>
                 </a>
                 <a href="https://www.tiktok.com/@dacolinata" target="_blank" class="text-zinc-400 hover:text-white transition">
                     <span class="sr-only">TikTok</span>
-                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-                    </svg>
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
                 </a>
                 <a href="https://www.youtube.com/@DaColinata" target="_blank" class="text-zinc-400 hover:text-white transition">
                     <span class="sr-only">YouTube</span>
-                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.254.418-4.814a2.503 2.503 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd" />
-                    </svg>
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.254.418-4.814a2.503 2.503 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd" /></svg>
                 </a>
                 <a href="mailto:contact@colinoconnormusic.com" class="text-zinc-400 hover:text-white transition">
                     <span class="sr-only">Email</span>
-                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 </a>
                 <a href="tel:+16154225539" class="text-zinc-400 hover:text-white transition">
                     <span class="sr-only">Call / Text</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
                 </a>
             </div>
         </div>
     </footer>
+
 </body>
 </html>
